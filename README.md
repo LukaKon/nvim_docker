@@ -7,7 +7,7 @@ Config from this repo is actually in lua.
 Check the references:
 Dockerfile borrowed from [TheLoneKing](https://github.com/TheLoneKing) and neovim configuration from [c@m](https://github.com/ChristianChiarulli)
 
-1. Enter to cloned folder
+1. Enter to the cloned folder
 2. Put your neovim configuration to 'config'.
 3. To build docker image run:
 ```
