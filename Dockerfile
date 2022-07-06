@@ -1,7 +1,4 @@
 # Docker file for base Neovim image.
-#
-# @author Maciej Bedra
-# @author Dineshkumar Gnanaprakasam
 
 # Debian image as base
 FROM debian:latest
@@ -63,24 +60,8 @@ RUN mkdir -p /root/.local/share/nvim/site/spell
 # Copy Neovim dictionaries.
 COPY ./spell/ /root/.local/share/nvim/site/spell/
 
-# Install Vim Plug.
-#RUN curl -fLo /root/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 # Create directory for Neovim configuration files.
 RUN mkdir -p /root/.config/nvim
-
-# Copy Neovim configuration files.
-#COPY ./nvim-basic-ide/ /root/.config/nvim/
-#COPY ./config /root/.config/nvim/
-
-# Install Neovim extensions.
-#RUN nvim --headless +PlugInstall +qall
-
-# Create directory for Neovim COC extensions.
-#RUN mkdir -p /root/.config/coc/extensions
-
-# Install Neovim COC extensions.
-#RUN cd /root/.config/coc/extensions
 
 # Install Node.js debugger adapter.
 #RUN cd /root/.config/nvim/plugins/vimspector && python3 install_gadget.py --force-enable-node
