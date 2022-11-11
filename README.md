@@ -11,7 +11,7 @@ Dockerfile borrowed from [TheLoneKing](https://github.com/TheLoneKing) and neovi
 2. Put your neovim configuration to 'config'.
 3. To build docker image run:
 ```
-docker build -t nvim:latest
+docker build -t nvim:latest .
 ```
 4. Create and run container. Attach volumes `-v` (repleace absolute path to your directory):
   - with nvim configuration **(must be)**
